@@ -3,11 +3,15 @@ const { PrimeVueResolver } = require('unplugin-vue-components/resolvers');
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  devServer: {
+    hot: true,
+    liveReload: true,
+  },
   configureWebpack: {
     plugins: [
       require('unplugin-vue-components/webpack')({
         dts: true,
-        resolvers: [PrimeVueResolver],
+        resolvers: [PrimeVueResolver()],
         types: [
           {
             from: 'vue-router',
