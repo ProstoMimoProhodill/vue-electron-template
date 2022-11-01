@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
-import store from './store';
 import PrimeVue from 'primevue/config';
 import Button from 'primevue/button';
 
@@ -10,9 +10,11 @@ import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
 
 const app = createApp(App);
-app.use(store);
 app.use(router);
 app.use(PrimeVue);
+
+const pinia = createPinia();
+app.use(pinia);
 
 app.component('Button', Button);
 
