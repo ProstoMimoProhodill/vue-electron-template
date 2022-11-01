@@ -5,8 +5,15 @@ module.exports = defineConfig({
   transpileDependencies: true,
   configureWebpack: {
     plugins: [
-      require('unplugin-vue-components/resolvers')({
+      require('unplugin-vue-components/webpack')({
+        dts: true,
         resolvers: [PrimeVueResolver],
+        types: [
+          {
+            from: 'vue-router',
+            names: ['RouterLink', 'RouterView'],
+          },
+        ],
       }),
     ],
   },
