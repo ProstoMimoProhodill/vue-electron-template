@@ -14,7 +14,6 @@ app.use(store);
 app.use(router);
 app.use(PrimeVue);
 
-// eslint-disable-next-line vue/multi-word-component-names
 app.component('Button', Button);
 
 app.mount('#app');
