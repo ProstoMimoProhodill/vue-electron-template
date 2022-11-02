@@ -8,14 +8,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import Button from 'primevue/button';
 
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-    Button,
-  },
-});
+export default defineComponent({});
 </script>

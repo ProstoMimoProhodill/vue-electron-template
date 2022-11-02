@@ -10,6 +10,7 @@ module.exports = defineConfig({
   configureWebpack: {
     plugins: [
       require('unplugin-vue-components/webpack')({
+        dirs: ['src/components', 'src/views'],
         dts: true,
         resolvers: [PrimeVueResolver()],
         types: [
